@@ -21,13 +21,17 @@ public class EjemploImprenta {
                 .addPagina(new Pagina("Patron Facade"));
 
         Informe informe = new Informe(new Persona("Juan", "Mecanico"),new Persona("Lucho", "Suarez"),"Estudio sobre microservicios");
-        imprimir(cv);
-        imprimir(informe);
-        imprimir(libro);
+        Imprimible.imprimir(cv);
+        Imprimible.imprimir(informe);
+        Imprimible.imprimir(libro);
+
+        Imprimible.imprimir(new Imprimible() {
+            @Override
+            public String imprimir() {
+                return "Que pasa chavales, generico clase anonima";
+            }
+        });
     }
 
 
-    public static void imprimir(Imprimible imprimible){
-        System.out.println(imprimible.imprimir());
-    }
 }

@@ -8,7 +8,8 @@ public class Curriculum extends Hoja implements Imprimible{
     private Persona persona;
     private String carrera;
     private List<String> experiencias;
-    public Curriculum(Persona contenido, String persona, String carrera) {
+
+    public Curriculum(Persona persona,  String carrera, String contenido) {
         super(contenido);
         this.persona = persona;
         this.carrera = carrera;
