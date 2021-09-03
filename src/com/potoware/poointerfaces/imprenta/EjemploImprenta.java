@@ -6,21 +6,21 @@ public class EjemploImprenta {
 
     public static void main(String[] args) {
 
-        Curriculum cv = new Curriculum("Jhon Due","Software Engineer","Resumen laboral ...");
-        cv.addExperiencias("Java");
-        cv.addExperiencias("Oracle DBA");
-        cv.addExperiencias("Spring Framework");
-        cv.addExperiencias("Desarrollador fullstack");
-        cv.addExperiencias("Angular");
+        Curriculum cv = new Curriculum(new Persona("Jhon","Connor"),"Software Engineer","Resumen laboral ...");
+        cv.addExperiencias("Java")
+                .addExperiencias("Oracle DBA")
+                .addExperiencias("Spring Framework")
+                .addExperiencias("Desarrollador fullstack")
+                .addExperiencias("Angular");
 
-        Libro libro = new Libro("Erich Gamma","Patrones de diseño Elementos reusabes", Genero.PROGRAMACION);
+        Libro libro = new Libro(new Persona("Alejandro", "Potosi"),"Patrones de diseño Elementos reusabes", Genero.PROGRAMACION);
         libro.addPagina(new Pagina("Patron Singleton"))
                 .addPagina(new Pagina("Patron obserbador"))
                 .addPagina(new Pagina("Patron fabrida"))
                 .addPagina(new Pagina("Patron Composite"))
-                .addPagina(new Pagina("Patron Fascade"));
+                .addPagina(new Pagina("Patron Facade"));
 
-        Informe informe = new Informe("Alejandro Potosi","Juan","Estudio sobre microservicios");
+        Informe informe = new Informe(new Persona("Juan", "Mecanico"),new Persona("Lucho", "Suarez"),"Estudio sobre microservicios");
         imprimir(cv);
         imprimir(informe);
         imprimir(libro);
