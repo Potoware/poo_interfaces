@@ -1,6 +1,6 @@
 package com.potoware.poointerfaces.imprenta.modelo;
 
-abstract class Hoja {
+public abstract class Hoja {
 
     protected String contenido;
 
